@@ -1,0 +1,154 @@
+ /* Fondo general */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* degradado azul-violeta */
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Contenedor con forma de celular */
+.phone {
+  width: 360px;
+  height: 640px;
+  background: #fff;
+  border-radius: 30px; /* bordes redondeados estilo smartphone */
+  box-shadow: 0 0 20px rgba(0,0,0,0.4); /* sombra para efecto realista */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.phone.survey {
+  height: auto;
+  min-height: min(640px, calc(100vh - 32px));
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+  align-items: flex-start;
+}
+
+.phone.survey .screen {
+  box-sizing: border-box;
+}
+
+.phone.survey .buttons {
+  position: sticky;
+  bottom: 0;
+  width: auto;
+  margin: 24px -20px 0;
+  padding: 12px 8px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.question {
+  margin: 24px 0;
+  text-align: left;
+}
+
+.phone.survey .question,
+.phone.survey .question > p {
+  text-align: left;
+}
+
+.phone.survey .question > label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  width: 100%;
+  text-align: left;
+}
+
+.phone.survey .question > label input {
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+.question > p {
+  font-weight: bold;
+}
+
+.form-error {
+  color: #a12622;
+}
+
+/* Pantalla interna */
+.screen {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Títulos */
+h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Texto de preguntas */
+p {
+  margin: 20px 0;
+  color: #555;
+  font-size: 16px;
+}
+
+/* Opciones tipo radio */
+label {
+  display: block;
+  margin: 8px 0;
+  font-size: 15px;
+  color: #333;
+}
+
+/* Cuadro de texto para justificación */
+textarea {
+  width: 90%;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 14px;
+  resize: none;
+  margin-top: 10px;
+}
+
+/* Botones inferiores */
+.buttons {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Estilo general de botones */
+button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Botón cancelar */
+.exit {
+  background: #444;
+  color: #fff;
+}
+
+/* Botón siguiente/finalizar */
+.start {
+  background: #28a745;
+  color: #fff;
+}
+
+/* Botón anterior (gris claro) */
+button[disabled],
+button:disabled {
+  background: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}

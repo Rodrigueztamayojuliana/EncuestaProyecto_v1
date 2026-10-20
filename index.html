@@ -1,0 +1,34 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Encuesta - Bienvenida</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="phone">
+    <div class="screen">
+      <h2>¡Bienvenido a la Encuesta!</h2>
+      <p>Queremos conocer tu opinión. ¿Estás listo?</p>
+      
+      <div class="buttons">
+        <button type="button" class="exit" onclick="salirEncuesta()">Salir</button>
+        <a href="formulario.php?pagina=1"><button class="start">Iniciar</button></a>
+      </div>
+      <p id="salida-aviso" role="status" hidden></p>
+    </div>
+  </div>
+  <script>
+    function salirEncuesta() {
+      window.close();
+      window.setTimeout(() => {
+        if (!window.closed) {
+          const aviso = document.getElementById('salida-aviso');
+          aviso.textContent = 'El navegador no permite cerrar esta pestaña automáticamente. Puedes cerrarla manualmente.';
+          aviso.hidden = false;
+        }
+      }, 100);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Encuesta - Pregunta 3</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="phone">
+    <div class="screen">
+      <h2>Pregunta 3</h2>
+      <p>¿Te daría miedo una IA demasiado inteligente?</p>
+
+      <form action="finalizar.php" method="post">
+        <label><input type="radio" name="miedo" value="Sí"> Sí</label><br>
+        <label><input type="radio" name="miedo" value="No">  No</label><br>
+        <label><input type="radio" name="miedo" value="A veces">  A veces</label><br><br>
+
+        <label for="justificacion3">Justifica tu respuesta:</label><br>
+        <textarea id="justificacion3" name="justificacion3" rows="4" cols="30" placeholder="Escribe tu justificación aquí..."></textarea>
+
+        <div class="buttons">
+          <a href="index.html"><button type="button" class="exit">Cancelar</button></a>
+          <a href="pagina2.html"><button type="button">Página anterior</button></a>
+          <button type="submit" class="start">Finalizar</button>
+        </div>

@@ -1,0 +1,31 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Encuesta - Pregunta 2</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="phone">
+    <div class="screen">
+      <h2>Pregunta 2</h2>
+      <p>¿La IA nos hace más inteligentes o más dependientes?</p>
+
+      <form action="pagina3.html" method="post">
+        <label><input type="radio" name="impacto" value="Más inteligentes">  Más inteligentes</label><br>
+        <label><input type="radio" name="impacto" value="Más dependientes">  Más dependientes</label><br>
+        <label><input type="radio" name="impacto" value="Brutos">  Brutos</label><br><br>
+
+        <label for="justificacion2">Justifica tu respuesta:</label><br>
+        <textarea id="justificacion2" name="justificacion2" rows="4" cols="30" placeholder="Explica tu opinión aquí..."></textarea>
+
+        <div class="buttons">
+          <a href="index.html"><button type="button" class="exit">Cancelar</button></a>
+          <a href="pagina1.html"><button type="button">Página anterior</button></a>
+          <button type="submit" class="start">Siguiente</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
